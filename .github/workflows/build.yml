@@ -4,3 +4,7 @@ on: [push, pull_request, workflow_dispatch]
 jobs:
   build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    with:
+      shield: nice_view  # Ensure this matches your overlay's shield name
+      board: nice_nano_v2  # Adjust based on your MCU
+      overlay-config: app/boards/shields/nice_view/nice_view.overlay
