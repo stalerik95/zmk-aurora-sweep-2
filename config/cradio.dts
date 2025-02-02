@@ -1,0 +1,11 @@
+/ {
+    lcd: display@0 {       // Create a new node labeled "lcd"
+        compatible = "dummy,display";  // Use an appropriate compatible string or a dummy value
+        reg = <0x0 0x0>;     // Dummy register values; adjust if you have real hardware
+        status = "okay";
+    };
+
+    chosen {
+        zephyr,display = <&lcd>;
+    };
+};
